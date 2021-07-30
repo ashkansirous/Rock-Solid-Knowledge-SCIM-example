@@ -20,10 +20,6 @@ namespace RockSolidTest.SCIM
 #pragma warning restore 1998
         {
             var user = JsonConvert.DeserializeObject<User>(resourceAsString);
-            foreach (var extension in user.Schemas)
-            {
-                var txt = extension.Value;
-            }
             Task.Delay(1);
             return new MyScimResult<User>(user, ScimResultStatus.Success, ScimStatusCode.Status200Ok);
         }

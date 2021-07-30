@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using RockSolidTest.SCIM;
 using Rsk.AspNetCore.Scim.Configuration;
 using Rsk.AspNetCore.Scim.Models;
+using Rsk.AspNetCore.Scim.Validators;
 
 namespace RockSolidTest
 {

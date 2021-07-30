@@ -44,9 +44,7 @@ namespace RockSolidTest.SCIM
                 await writer.WriteLineAsync(serializedUser);
             }
 
-            var result =
-                new MyScimResult<User>(resource, ScimResultStatus.Success, ScimStatusCode.Status201Created);
-            return result;
+            return ScimResult<User>.Success(resource);
         }
 
 

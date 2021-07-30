@@ -1,9 +1,11 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Rsk.AspNetCore.Scim.Configuration;
+using Rsk.AspNetCore.Scim.Models;
 
 namespace RockSolidTest
 {
@@ -25,8 +27,11 @@ namespace RockSolidTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddScimServiceProvider("/scim", new ScimLicensingOptions(){LicenseKey = LicenseKey, Licensee = _lincenceName })
-                .AddScimDefaultResourcesForInMemoryStore();
+            services.AddScimServiceProvider("/scim",
+                    new ScimLicensingOptions() {LicenseKey = LicenseKey, Licensee = _lincenceName})
+                .AddScimDefaultResourcesForInMemoryStore()
+                .AddResourceExtension<User, MyCustomExtension>(
+                    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:MyCustomExtension");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,5 +62,14 @@ namespace RockSolidTest
 
             app.UseScim();
         }
+
+        public class MyCustomExtension
+        {
+            public int EmployeeId { get; set; }
+        
+            public string CustomClaim1 { get; set; }
+        }
+
+
     }
 }

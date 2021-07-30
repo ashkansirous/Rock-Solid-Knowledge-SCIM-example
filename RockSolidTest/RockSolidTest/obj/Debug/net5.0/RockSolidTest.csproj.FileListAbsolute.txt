@@ -8,7 +8,6 @@ C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\RockSoli
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\ref\RockSolidTest.dll
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\RockSolidTest.pdb
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\RockSolidTest.Views.dll
-C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\RockSolidTest.Views.pdb
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\IdentityModel.dll
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Projects\SCIM\RockSolid\RockSolidTest\RockSolidTest\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
